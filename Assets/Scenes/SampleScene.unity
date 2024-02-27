@@ -461,7 +461,6 @@ MonoBehaviour:
   ForwardForce: 50000
   Horiforce: 300
   jump: 10
-  onGround: 0
   velovity: {x: 0, y: 0, z: 0}
   GameOver: {fileID: 4285407165288981034}
 --- !u!54 &857755656

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +12,11 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
     //[SerializeField]bool onGround;
     [SerializeField]Vector3 velovity;
-    [SerializeField] GameObject GameOver;
+    [SerializeField] GameObject[] GameOver=new GameObject[4];
     float halfWidth = Screen.width / 2;
     float tophight = Screen.height* 0.7f;
+    AudioSource audioSource;
+    [SerializeField]AudioClip clip;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,13 +24,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        Horiforce = PlayerPrefs.GetFloat("Sens");
          rb.velocity = new Vector3(0,0,8);
     }
     
  
     private void Update()
     {
-        Debug.Log(Physics.gravity);
+        if (transform.position.y < -5)
+        {
+            audioSource.clip= clip;
+            audioSource.Play();
+            Time.timeScale = 0;
+            GameOver[0].SetActive(true);
+            GameOver[1].SetActive(false);
+            GameOver[2].SetActive(false);
+            GameOver[3].SetActive(false);
+           
+        }
+        if (Math.Abs(rb.velocity.z) < 1)
+        {
+            StartCoroutine(CheckIfStop());
+        }
+        
         if(transform.position.y>15) 
         {
             Physics.gravity =new Vector3(0, -100,0);
@@ -37,7 +56,8 @@ public class PlayerMovement : MonoBehaviour
             Physics.gravity = new Vector3(0, -9.8f, 0);
         }
         velovity=rb.velocity;
-        rb.AddForce(Vector3.forward *Time.deltaTime* ForwardForce*Time.deltaTime, ForceMode.Acceleration);
+        /*Debug.Log(velovity);*/
+        rb.AddForce(Vector3.forward * ForwardForce*Time.deltaTime, ForceMode.Acceleration);
         
         float key = Input.GetAxisRaw("Horizontal");
         if (key != 0)
@@ -49,29 +69,31 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
-        var touch = Input.GetTouch(0);
-        var touchPos = touch.position;
-
-        if ((touchPos.x < halfWidth- Screen.width * 0.3)&&(touchPos.y<tophight))
+        if (Input.touchCount > 0)
         {
-            if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
-            {
-                if ((transform.position.x > 20) && (transform.position.x < 120))
-                {
-                    rb.AddForce(Horiforce * Time.deltaTime * -1, 0, 0, ForceMode.Impulse);
+            var touch = Input.GetTouch(0);
+            var touchPos = touch.position;
 
+            if ((touchPos.x < halfWidth - Screen.width * 0.3) && (touchPos.y < tophight))
+            {
+                if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
+                {
+                    if ((transform.position.x > 20) && (transform.position.x < 120))
+                    {
+                        rb.AddForce(Horiforce * Time.deltaTime * -1, 0, 0, ForceMode.Impulse);
+
+                    }
                 }
             }
-        }
-        else if ((touchPos.x > halfWidth+ Screen.width*0.3)&& (touchPos.y < tophight))
-        {
-            if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
+            else if ((touchPos.x > halfWidth + Screen.width * 0.3) && (touchPos.y < tophight))
             {
-                if ((transform.position.x > 20) && (transform.position.x < 120))
+                if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
                 {
-                    rb.AddForce(Horiforce * Time.deltaTime, 0, 0, ForceMode.Impulse);
-                    //rb.velocity=new Vector3(key*xforce,rb.velocity.y,rb.velocity.z);
+                    if ((transform.position.x > 20) && (transform.position.x < 120))
+                    {
+                        rb.AddForce(Horiforce * Time.deltaTime, 0, 0, ForceMode.Impulse);
+                        //rb.velocity=new Vector3(key*xforce,rb.velocity.y,rb.velocity.z);
+                    }
                 }
             }
         }
@@ -84,12 +106,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        if (transform.position.y < -5)
-        {
-            Time.timeScale = 0;
-            GameOver.SetActive(true);
-            Debug.Log("gameOver");
-        }
+        
     }
     /*private void OnCollisionEnter(Collision collision)
     {
@@ -100,4 +117,19 @@ public class PlayerMovement : MonoBehaviour
     {
         onGround = false;
     }*/
+    IEnumerator CheckIfStop()
+    {
+        yield return new WaitForSeconds(5);
+        if (Math.Abs(rb.velocity.z) < 1)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+            Time.timeScale = 0;
+            GameOver[0].SetActive(true);
+            GameOver[1].SetActive(false);
+            GameOver[2].SetActive(false);
+            GameOver[3].SetActive(false);
+
+        }
+    }
 }

@@ -14,9 +14,10 @@ public class UiManager : MonoBehaviour
     public GameObject Pause;
     public GameObject PauseSprite;
     public GameObject WelcomeMessage;
-    
+    AudioSource AudioSource;
     void Start()
     {
+        AudioSource = GetComponent<AudioSource>();  
         Time.timeScale = 1.0f;
         StartCoroutine(StartMessage(WelcomeMessage));
     }
@@ -25,6 +26,7 @@ public class UiManager : MonoBehaviour
 
     public void PauseFunction()
     {
+        AudioSource.Play();
         Play.SetActive(true); 
         Option.SetActive(false);
         Time.timeScale = 0;
@@ -33,6 +35,7 @@ public class UiManager : MonoBehaviour
     }
     public void PlayFunction()
     {
+        AudioSource.Play();
         Pause.SetActive(true);
         Menu.SetActive(false );
         Time.timeScale = 1.0f;
@@ -42,6 +45,7 @@ public class UiManager : MonoBehaviour
     }
     public void MenuFunction()
     {
+        AudioSource.Play();
         Menu.SetActive(true);
         Option.SetActive(false);
         Time.timeScale = 0;
@@ -50,10 +54,12 @@ public class UiManager : MonoBehaviour
     }
     public void ExitFunction()
     {
-        Application.Quit();
+        AudioSource.Play();
+        SceneManager.LoadScene(0);
     }
     public void RestarFunction()
     {
+        AudioSource.Play();
         SceneManager.LoadScene(1);
     }
 

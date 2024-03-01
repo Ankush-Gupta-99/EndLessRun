@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - NewInsta
+  - Goldcoin
+  - Silvercoin
+  - GoldenChest
+  - WoodenChest
+  - SpeedBoost
+  - SilverCoinDrop
+  - GoldCoinDrop
+  - Shield
   layers:
   - Default
   - TransparentFX

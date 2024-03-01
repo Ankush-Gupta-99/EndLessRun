@@ -10,7 +10,7 @@ public class MainMenuScreen : MonoBehaviour
 {
     [SerializeField]
     AudioMixer Volume;
-    [SerializeField] GameObject[] OnOff;
+    [SerializeField] GameObject OnOff;
     [SerializeField] GameObject menu;
     [SerializeField] Slider SensSlider;
     [SerializeField] Slider VolumeSlider;
@@ -52,20 +52,14 @@ public class MainMenuScreen : MonoBehaviour
             Image.sprite = Mute;
         }
         Quality.value = QualitySettings.GetQualityLevel();
-        foreach (var item in OnOff)
-        {
-            item.SetActive(false);
-        }
+        OnOff.SetActive(false);
 
     }
     public void back()
     {
         As.Play();
         menu.SetActive(false);
-        foreach (var item in OnOff)
-        {
-            item.SetActive(true);
-        }
+        OnOff.SetActive(true);
 
     }
 

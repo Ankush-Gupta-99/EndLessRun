@@ -11,6 +11,7 @@ public class ObjectInstanciate : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            gameObject.SetActive(false);
             Instantiate(Insta[Random.Range(0,Insta.Length)], transform.position+new Vector3(0,0,2399), Quaternion.identity);
         }
     }

@@ -12,23 +12,46 @@ public class MainMenuScreen : MonoBehaviour
     AudioMixer Volume;
     [SerializeField] GameObject OnOff;
     [SerializeField] GameObject menu;
+    [SerializeField] GameObject BallSelection;
+    [SerializeField] GameObject Sphere;
     [SerializeField] Slider SensSlider;
     [SerializeField] Slider VolumeSlider;
     AudioSource As;
     [SerializeField] Image Image;
     [SerializeField] Sprite Mute, Unmute;
     [SerializeField] TMP_Dropdown Quality;
+    [SerializeField] TMP_Text CoinDisp;
+    [SerializeField] GameObject LoadingScreen;
+    [SerializeField] Slider LoadingSlider;
+
     private void Start()
     {
         As = GetComponent<AudioSource>();
         SetSens(PlayerPrefs.GetFloat("Sens", 300));
         SetVol(PlayerPrefs.GetFloat("Volume", 0));
     }
+    private void Update()
+    {
+        CoinDisp.SetText(PlayerPrefs.GetInt("Coin", 0).ToString());
+    }
     public void playbutton()
     {
         As.Play();
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadLevel());
         
+    }
+    IEnumerator LoadLevel()
+    {
+        OnOff.SetActive(false);
+        LoadingScreen.SetActive(true);
+        AsyncOperation LevelingLoad=SceneManager.LoadSceneAsync(1);
+        while(!LevelingLoad.isDone)
+        {
+            float prog = Mathf.Clamp01(LevelingLoad.progress / 0.9f);
+            LoadingSlider.value= prog-0.1f;
+            yield return null;
+        }
+
     }
     public void ExitButton()
     {
@@ -109,5 +132,46 @@ public class MainMenuScreen : MonoBehaviour
     {
         As.Play();
         QualitySettings.SetQualityLevel(Q);
+    }
+
+    int BallNo;
+    public void BallSelctionButton()
+    {
+        As.Play();
+        Sphere.transform.GetChild(Mathf.Clamp(BallNo, 0, Sphere.transform.childCount-1)).gameObject.SetActive(false);
+        BallNo = 0;
+        Sphere.transform.GetChild(Mathf.Clamp(BallNo, 0, Sphere.transform.childCount-1)).gameObject.SetActive(true);
+        OnOff.SetActive(false);
+        BallSelection.SetActive(true);
+    }
+
+    public void Next()
+    {
+        As.Play();
+        Sphere.transform.GetChild(Mathf.Clamp(BallNo, 0, Sphere.transform.childCount - 1)).gameObject.SetActive(false);
+        BallNo = Mathf.Clamp(++BallNo, 0, Sphere.transform.childCount - 1);
+        Sphere.transform.GetChild(Mathf.Clamp(BallNo, 0, Sphere.transform.childCount - 1)).gameObject.SetActive(true);
+        
+    }
+    public void Previous()
+    {
+        As.Play();
+        Sphere.transform.GetChild(Mathf.Clamp(BallNo, 0, Sphere.transform.childCount - 1)).gameObject.SetActive(false);
+        BallNo = Mathf.Clamp(--BallNo, 0, Sphere.transform.childCount - 1);
+        Sphere.transform.GetChild(Mathf.Clamp(BallNo, 0, Sphere.transform.childCount - 1)).gameObject.SetActive(true);
+        
+    }
+    public void Back()
+    {
+        As.Play();
+        BallSelection.SetActive(false);
+        OnOff.SetActive(true);
+    }
+
+    public void Selected()
+    {
+        As.Play();
+        Back();
+        PlayerPrefs.SetInt("Ball", BallNo);
     }
 }

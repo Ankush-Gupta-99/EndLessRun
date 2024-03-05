@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &39036468384785341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,6 +2263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &218265232634759302
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,6 +4159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &389539934717518074
 GameObject:
   m_ObjectHideFlags: 0
@@ -4276,6 +4279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &406521176147544866
 GameObject:
   m_ObjectHideFlags: 0
@@ -5457,6 +5461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &533865363651970834
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,6 +6598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &592741810862571746
 GameObject:
   m_ObjectHideFlags: 0
@@ -15039,6 +15045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &1357461782278964653
 GameObject:
   m_ObjectHideFlags: 0
@@ -17937,6 +17944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &1573753915066872182
 GameObject:
   m_ObjectHideFlags: 0
@@ -19543,6 +19551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &1677624462949989064
 GameObject:
   m_ObjectHideFlags: 0
@@ -19662,6 +19671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &1698664936703423375
 GameObject:
   m_ObjectHideFlags: 0
@@ -20738,6 +20748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &1780562260075678369
 GameObject:
   m_ObjectHideFlags: 0
@@ -21282,6 +21293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &1818888191777238540
 GameObject:
   m_ObjectHideFlags: 0
@@ -24191,6 +24203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &2016270289451244915
 GameObject:
   m_ObjectHideFlags: 0
@@ -26169,6 +26182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &2205693327032364207
 GameObject:
   m_ObjectHideFlags: 0
@@ -26500,6 +26514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &2221482254887697390
 GameObject:
   m_ObjectHideFlags: 0
@@ -27322,6 +27337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &2301533232114872911
 GameObject:
   m_ObjectHideFlags: 0
@@ -27754,7 +27770,7 @@ Transform:
   m_GameObject: {fileID: 2360256773868942257}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 49.924255, y: 0, z: -1088.4185}
+  m_LocalPosition: {x: 45.9, y: 0, z: -1098.8}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -29364,6 +29380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &2570691755976107189
 GameObject:
   m_ObjectHideFlags: 0
@@ -30479,6 +30496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &2663000657625672930
 GameObject:
   m_ObjectHideFlags: 0
@@ -31058,6 +31076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &2703007147354287907
 GameObject:
   m_ObjectHideFlags: 0
@@ -34187,6 +34206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &2939881061541400867
 GameObject:
   m_ObjectHideFlags: 0
@@ -36406,6 +36426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &3095298142468851120
 GameObject:
   m_ObjectHideFlags: 0
@@ -39229,6 +39250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &3288687463008164167
 GameObject:
   m_ObjectHideFlags: 0
@@ -39951,6 +39973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &3330472117335081505
 GameObject:
   m_ObjectHideFlags: 0
@@ -40103,6 +40126,7 @@ GameObject:
   - component: {fileID: 24572275112569279}
   - component: {fileID: 6576371607451447300}
   - component: {fileID: 9156963053308455597}
+  - component: {fileID: 5768518995760990542}
   m_Layer: 0
   m_Name: Bench Wood 03
   m_TagString: Untagged
@@ -40118,13 +40142,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3335622970127170260}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.0000024414062, y: 0, z: 0.00000061035155}
+  m_LocalRotation: {x: -0.5498561, y: 0.44454658, z: 0.44439143, w: 0.5500481}
+  m_LocalPosition: {x: 0, y: 0, z: 5.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 987430940492922445}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 77.89, z: 0}
 --- !u!33 &6576371607451447300
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -40175,6 +40199,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5768518995760990542
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3335622970127170260}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8001000912012191646, guid: cd449b812afef5340a5af80a1edc174d, type: 3}
 --- !u!1 &3346585221240393192
 GameObject:
   m_ObjectHideFlags: 0
@@ -41934,6 +41980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &3487259912818907148
 GameObject:
   m_ObjectHideFlags: 0
@@ -44288,6 +44335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &3685105076806700349
 GameObject:
   m_ObjectHideFlags: 0
@@ -45264,6 +45312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &3747259144730985755
 GameObject:
   m_ObjectHideFlags: 0
@@ -46154,7 +46203,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2600}
-  m_LocalScale: {x: 500, y: 8000, z: 1}
+  m_LocalScale: {x: 500, y: 8000, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2788705244405897942}
@@ -46245,7 +46294,6 @@ MonoBehaviour:
   Insta:
   - {fileID: 2997473225123257531, guid: 1ed129b8e31eee84e9840293512ffca6, type: 3}
   - {fileID: 3093558953517174309, guid: 684c95d89cb51734f8485580029d4640, type: 3}
-  - {fileID: 3378781311886493629}
   - {fileID: 6133084435217210300, guid: 75e169ac0949a6d4687e4eed42ddfce1, type: 3}
 --- !u!1 &3859485882919673876
 GameObject:
@@ -46581,6 +46629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &3881174181089318235
 GameObject:
   m_ObjectHideFlags: 0
@@ -46809,6 +46858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &3895282901619061697
 GameObject:
   m_ObjectHideFlags: 0
@@ -52268,6 +52318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &4278675134760644109
 GameObject:
   m_ObjectHideFlags: 0
@@ -53942,6 +53993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &4474485520019542979
 GameObject:
   m_ObjectHideFlags: 0
@@ -54838,6 +54890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &4558787813051709220
 GameObject:
   m_ObjectHideFlags: 0
@@ -65034,6 +65087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &5595879962149142581
 GameObject:
   m_ObjectHideFlags: 0
@@ -66824,6 +66878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &5722809644275643943
 GameObject:
   m_ObjectHideFlags: 0
@@ -67632,6 +67687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &5798790044541704178
 GameObject:
   m_ObjectHideFlags: 0
@@ -70394,6 +70450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &6101897864417855023
 GameObject:
   m_ObjectHideFlags: 0
@@ -70972,6 +71029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &6170036864447850305
 GameObject:
   m_ObjectHideFlags: 0
@@ -71146,7 +71204,7 @@ Transform:
   m_GameObject: {fileID: 6182828978431378223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.9, y: 10, z: 174}
+  m_LocalPosition: {x: 24.6, y: 10, z: 305}
   m_LocalScale: {x: 30, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71344,6 +71402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &6188368380273857196
 GameObject:
   m_ObjectHideFlags: 0
@@ -75455,6 +75514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &6527233439590775630
 GameObject:
   m_ObjectHideFlags: 0
@@ -80088,6 +80148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &6896977788531346409
 GameObject:
   m_ObjectHideFlags: 0
@@ -82927,6 +82988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &7161595845249283535
 GameObject:
   m_ObjectHideFlags: 0
@@ -83046,6 +83108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &7167542928349374054
 GameObject:
   m_ObjectHideFlags: 0
@@ -85921,6 +85984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &7391962694571760302
 GameObject:
   m_ObjectHideFlags: 0
@@ -86923,6 +86987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &7486486692820304518
 GameObject:
   m_ObjectHideFlags: 0
@@ -87180,6 +87245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &7495812744997750525
 GameObject:
   m_ObjectHideFlags: 0
@@ -88301,6 +88367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &7591113715189664412
 GameObject:
   m_ObjectHideFlags: 0
@@ -93892,6 +93959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &8092422528949587761
 GameObject:
   m_ObjectHideFlags: 0
@@ -95112,6 +95180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &8264071591364520318
 GameObject:
   m_ObjectHideFlags: 0
@@ -97054,6 +97123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &8418032579612865427
 GameObject:
   m_ObjectHideFlags: 0
@@ -98091,6 +98161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &8486174718217517470
 GameObject:
   m_ObjectHideFlags: 0
@@ -101413,6 +101484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &8810520229694887157
 GameObject:
   m_ObjectHideFlags: 0
@@ -101850,6 +101922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &8839472008993510961
 GameObject:
   m_ObjectHideFlags: 0
@@ -102622,6 +102695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &8910109510130850930
 GameObject:
   m_ObjectHideFlags: 0
@@ -104860,6 +104934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a297264e0cb9e4baeea73140916d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsp: 144
 --- !u!1 &9163923042855227370
 GameObject:
   m_ObjectHideFlags: 0

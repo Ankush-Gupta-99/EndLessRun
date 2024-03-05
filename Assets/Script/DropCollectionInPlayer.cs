@@ -7,10 +7,10 @@ using UnityEngine.Android;
 public class DropCollectionInPlayer : MonoBehaviour
 {
     [SerializeField] TMP_Text CoinDisplay;
-    [SerializeField] int coin;
+    [HideInInspector]public int coin;
     [SerializeField] SphereCollider collide;
     [SerializeField] Rigidbody rb;
-    [SerializeField] Material material;
+    [SerializeField] GameObject ShieldG;
     AudioSource AudioSource;
     [SerializeField] AudioClip Coin, Speed, Shield, others; 
 
@@ -51,20 +51,21 @@ public class DropCollectionInPlayer : MonoBehaviour
         {
             AudioSource.clip = others;
             AudioSource.Play();
-
+            PlayerPrefs.SetInt("GCreat", PlayerPrefs.GetInt("GCreat",0) + 1);
             other.gameObject.SetActive(false);
         }
         if (other.gameObject.CompareTag("WoodenChest"))
         {
             AudioSource.clip = others;
             AudioSource.Play();
+            PlayerPrefs.SetInt("WCreat", PlayerPrefs.GetInt("WCreat", 0) + 1);
             other.gameObject.SetActive(false);
         }
         if (other.gameObject.CompareTag("Shield"))
         {
             AudioSource.clip = Shield;
             AudioSource.Play();
-            material.EnableKeyword("_EMISSION");
+            ShieldG.SetActive(true);
             other.gameObject.SetActive(false);
             rb.velocity += new Vector3(0, 0, 20);
             transform.position =new Vector3(transform.position.x, 10 ,transform.position.z);
@@ -88,33 +89,33 @@ public class DropCollectionInPlayer : MonoBehaviour
             other.gameObject.SetActive(false);
             CoinDisplay.color =Color.yellow ;
         }
-        CoinDisplay.SetText("Coin: " + coin);
+        CoinDisplay.SetText(coin.ToString());
 
     }
     IEnumerator trigDes() {
         
         yield return new WaitForSeconds(7);
-        material.DisableKeyword("_EMISSION");
+        ShieldG.SetActive(false);
         yield return new WaitForSeconds(0.3f);
-        material.EnableKeyword("_EMISSION");
+        ShieldG.SetActive(true);
         yield return new WaitForSeconds(0.3f);
-        material.DisableKeyword("_EMISSION");
+        ShieldG.SetActive(false);
         yield return new WaitForSeconds(0.3f);
-        material.EnableKeyword("_EMISSION");
+        ShieldG.SetActive(true);
         yield return new WaitForSeconds(0.3f);
-        material.DisableKeyword("_EMISSION");
+        ShieldG.SetActive(false);
         yield return new WaitForSeconds(0.3f);
-        material.EnableKeyword("_EMISSION");
+        ShieldG.SetActive(true);
         yield return new WaitForSeconds(0.3f);
-        material.DisableKeyword("_EMISSION");
+        ShieldG.SetActive(false);
         yield return new WaitForSeconds(0.3f);
-        material.EnableKeyword("_EMISSION");
+        ShieldG.SetActive(true);
         yield return new WaitForSeconds(0.3f);
-        material.DisableKeyword("_EMISSION");
+        ShieldG.SetActive(false);
         yield return new WaitForSeconds(0.3f);
-        material.EnableKeyword("_EMISSION");
+        ShieldG.SetActive(true);
         yield return new WaitForSeconds(0.3f);
-        material.DisableKeyword("_EMISSION");
+        ShieldG.SetActive(false);
         collide.isTrigger = false;
         rb.constraints = RigidbodyConstraints.None;
     }

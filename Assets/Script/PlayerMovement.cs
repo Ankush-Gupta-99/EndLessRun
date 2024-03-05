@@ -17,10 +17,12 @@ public class PlayerMovement : MonoBehaviour
     float tophight = Screen.height* 0.7f;
     AudioSource audioSource;
     [SerializeField]AudioClip clip;
+    DropCollectionInPlayer DropCollectionInPlayer;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        DropCollectionInPlayer = GetComponent<DropCollectionInPlayer>();
     }
 
     private void Start()
@@ -30,18 +32,12 @@ public class PlayerMovement : MonoBehaviour
     }
     
  
-    private void Update()
+    private void FixedUpdate()
     {
         if (transform.position.y < -5)
         {
-            audioSource.clip= clip;
-            audioSource.Play();
-            Time.timeScale = 0;
-            GameOver[0].SetActive(true);
-            GameOver[1].SetActive(false);
-            GameOver[2].SetActive(false);
-            GameOver[3].SetActive(false);
-           
+
+            StartCoroutine(Gameover());
         }
         if (Math.Abs(rb.velocity.z) < 1)
         {
@@ -123,14 +119,20 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(5);
         if (Math.Abs(rb.velocity.z) < 1)
         {
-            audioSource.clip = clip;
-            audioSource.Play();
-            Time.timeScale = 0;
-            GameOver[0].SetActive(true);
-            GameOver[1].SetActive(false);
-            GameOver[2].SetActive(false);
-            GameOver[3].SetActive(false);
-
+            StartCoroutine(Gameover());
         }
+    }
+    IEnumerator Gameover()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        audioSource.clip = clip;
+        audioSource.Play();
+        Time.timeScale = 0;
+        GameOver[0].SetActive(true);
+        GameOver[1].SetActive(false);
+        GameOver[2].SetActive(false);
+        GameOver[3].SetActive(false);
+        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin", 0) + DropCollectionInPlayer.coin);
+        StopAllCoroutines();
     }
 }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class AxisRotation : MonoBehaviour
 {
-
-    void Update()
+    public int coinsp=144;
+    void FixedUpdate()
     {
         if (transform.eulerAngles.y < 360)
         {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 1f, transform.eulerAngles.z);
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, (transform.eulerAngles.y + Time.deltaTime * coinsp), transform.eulerAngles.z);
         }
         else
         {
